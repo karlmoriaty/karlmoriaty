@@ -23,11 +23,6 @@ Feel free to look around! I hope you enjoy my projects, and don't forget to leav
 | [interior-moodboard-3d](https://github.com/karlmoriaty/interior-moodboard-3d) | Drag material samples into a cutaway apartment; move furniture and sunlight | Three.js · HTML |
 | [XSocialMiner](https://github.com/karlmoriaty/XSocialMiner) | Local X/Twitter data collection with a WPF dashboard | C# · WPF · Playwright |
 
-<p align="center">
-  <a href="https://github.com/karlmoriaty/interior-moodboard-3d">
-    <img src="https://raw.githubusercontent.com/karlmoriaty/interior-moodboard-3d/main/preview.png" alt="interior-moodboard-3d preview" width="100%" />
-  </a>
-</p>
 
 ## Open Source
 

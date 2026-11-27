@@ -8,26 +8,43 @@ if (!token) {
   process.exit(1);
 }
 
-const query = `query($login: String!) {
-  user(login: $login) {
-    pinnedItems(first: 6, types: [REPOSITORY]) {
-      nodes {
-        ... on Repository {
-          name
+const EXTRA_REPOS = [
+  "karlmoriaty/runesvaner",
+  "karlmoriaty/ClientLedger",
+  "karlmoriaty/markdig",
+  "karlmoriaty/XSocialMiner",
+];
+
+const REPO_FIELDS = `name
+          nameWithOwner
           url
           description
           stargazerCount
           forkCount
           isArchived
           isPrivate
+          isFork
           primaryLanguage {
             name
             color
-          }
+          }`;
+
+const extraSelections = EXTRA_REPOS.map((fullName, index) => {
+  const [owner, name] = fullName.split("/");
+  return `extra${index}: repository(owner: "${owner}", name: "${name}") { ${REPO_FIELDS} }`;
+}).join("\n");
+
+const query = `query($login: String!) {
+  user(login: $login) {
+    pinnedItems(first: 6, types: [REPOSITORY]) {
+      nodes {
+        ... on Repository {
+          ${REPO_FIELDS}
         }
       }
     }
   }
+  ${extraSelections}
 }`;
 
 const response = await fetch("https://api.github.com/graphql", {
@@ -45,9 +62,15 @@ if (!response.ok || payload.errors) {
   process.exit(1);
 }
 
-const repos = (payload.data?.user?.pinnedItems.nodes || []).filter(
-  (repo) => repo && repo.name && !repo.isPrivate,
-);
+const pinned = (payload.data?.user?.pinnedItems.nodes || []).filter(Boolean);
+const extras = EXTRA_REPOS.map((_, index) => payload.data?.[`extra${index}`]).filter(Boolean);
+const seen = new Set();
+const repos = [...pinned, ...extras].filter((repo) => {
+  if (!repo || !repo.name || repo.isPrivate) return false;
+  if (seen.has(repo.nameWithOwner)) return false;
+  seen.add(repo.nameWithOwner);
+  return true;
+});
 if (repos.length === 0) {
   console.error(`no public pinned repositories for ${login}`);
   process.exit(1);

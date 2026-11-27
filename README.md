@@ -49,6 +49,28 @@ Feel free to look around! I hope you enjoy my projects, and don't forget to leav
 <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/runesgalder.svg" alt="Runesgalder" width="48%">
 </picture></a>
 </p>
+
+<p align="center">
+<a href="https://github.com/karlmoriaty/runesvaner"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/runesvaner.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/runesvaner.svg" alt="runesvaner" width="48%">
+</picture></a>
+<a href="https://github.com/karlmoriaty/ClientLedger"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/clientledger.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/clientledger.svg" alt="ClientLedger" width="48%">
+</picture></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/karlmoriaty/markdig"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/markdig.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/markdig.svg" alt="markdig" width="48%">
+</picture></a>
+<a href="https://github.com/karlmoriaty/XSocialMiner"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/xsocialminer.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/xsocialminer.svg" alt="XSocialMiner" width="48%">
+</picture></a>
+</p>
 <!-- repositories:end -->
 
 ## Open Source
@@ -101,15 +123,6 @@ C# 是我最喜欢的编程语言，我也喜欢使用 Go 和 TypeScript，并�
 | GitHub Stats | Most Used Languages |
 |:---:|:---:|
 | ![GitHub stats](https://github-readme-stats.vercel.app/api?username=karlmoriaty&show_icons=true&include_all_commits=true&count_private=true&hide_border=true) | ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=karlmoriaty&layout=compact&langs_count=8&hide_border=true) |
-
-## Contribution Breakdown
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-radar-dark.svg">
-    <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-radar-light.svg" alt="Contribution breakdown: commits, pull requests, issues, code review" width="420">
-  </picture>
-</p>
 
 ## Languages and Tools
 

@@ -1,4 +1,4 @@
-name: Update contribution cards
+name: Update profile cards
 
 on:
   schedule:
@@ -16,16 +16,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Generate SVGs
+      - name: Generate contribution breakdown
         env:
           GITHUB_LOGIN: karlmoriaty
           PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/generate-contrib.mjs
+      - name: Generate repository cards
+        env:
+          GITHUB_LOGIN: karlmoriaty
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-repos.mjs
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/contrib-heatmap-light.svg assets/contrib-heatmap-dark.svg assets/contrib-radar-light.svg assets/contrib-radar-dark.svg
-          git diff --cached --quiet || git commit -m "chore: update contribution cards"
+          git add assets/contrib-radar-light.svg assets/contrib-radar-dark.svg assets/repos README.md
+          git diff --cached --quiet || git commit -m "chore: update profile cards"
           git push

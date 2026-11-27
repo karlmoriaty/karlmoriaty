@@ -20,16 +20,6 @@ const query = `query($login: String!, $from: DateTime!, $to: DateTime!) {
       totalIssueContributions
       totalPullRequestContributions
       totalPullRequestReviewContributions
-      contributionCalendar {
-        totalContributions
-        weeks {
-          contributionDays {
-            date
-            contributionCount
-            contributionLevel
-          }
-        }
-      }
     }
   }
 }`;
@@ -55,62 +45,20 @@ if (!collection) {
   process.exit(1);
 }
 
-const dayByDate = new Map();
-for (const week of collection.contributionCalendar.weeks) {
-  for (const day of week.contributionDays) {
-    if (Number(day.date.slice(0, 4)) === year) dayByDate.set(day.date, day);
-  }
-}
-
-const start = new Date(Date.UTC(year, 0, 1));
-start.setUTCDate(start.getUTCDate() - start.getUTCDay());
-const end = new Date(Date.UTC(year, 11, 31));
-end.setUTCDate(end.getUTCDate() + (6 - end.getUTCDay()));
-
-const weeks = [];
-for (const cursor = new Date(start); cursor <= end; ) {
-  const week = [];
-  for (let i = 0; i < 7; i++) {
-    const date = cursor.toISOString().slice(0, 10);
-    const inYear = Number(date.slice(0, 4)) === year;
-    const found = inYear ? dayByDate.get(date) : null;
-    week.push({
-      date,
-      inYear,
-      count: found?.contributionCount ?? 0,
-      level: found?.contributionLevel ?? "NONE",
-    });
-    cursor.setUTCDate(cursor.getUTCDate() + 1);
-  }
-  weeks.push(week);
-}
-
-const total = collection.contributionCalendar.totalContributions;
 const themes = {
   light: {
     title: "#24292f",
     text: "#57606a",
     grid: "#d0d7de",
-    levels: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
     accent: "#2da44e",
   },
   dark: {
     title: "#c9d1d9",
     text: "#8b949e",
     grid: "#30363d",
-    levels: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
     accent: "#3fb950",
   },
 };
-
-const levelIndex = {
-  NONE: 0,
-  FIRST_QUARTILE: 1,
-  SECOND_QUARTILE: 2,
-  THIRD_QUARTILE: 3,
-  FOURTH_QUARTILE: 4,
-};
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function esc(value) {
   return String(value)
@@ -118,86 +66,6 @@ function esc(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
-}
-
-function levelOf(day) {
-  if (levelIndex[day.level] !== undefined) return levelIndex[day.level];
-  if (day.count === 0) return 0;
-  if (day.count <= 3) return 1;
-  if (day.count <= 6) return 2;
-  if (day.count <= 9) return 3;
-  return 4;
-}
-
-function heatmapSvg(theme) {
-  const colors = themes[theme];
-  const cell = 11;
-  const pitch = 14;
-  const left = 34;
-  const top = 38;
-  const width = left + weeks.length * pitch + 18;
-  const height = top + 7 * pitch + 32;
-  const parts = [];
-
-  parts.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(`${total} contributions in ${year}`)}">`,
-  );
-  parts.push(
-    `<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}</style>`,
-  );
-  parts.push(
-    `<text x="0" y="14" fill="${colors.title}" font-size="14" font-weight="600">${total} contributions in ${year}</text>`,
-  );
-
-  let lastMonth = -1;
-  let lastLabelX = -100;
-  weeks.forEach((week, weekIndex) => {
-    const first = week.find((day) => day.inYear);
-    if (!first) return;
-    const month = Number(first.date.slice(5, 7)) - 1;
-    if (month === lastMonth) return;
-    lastMonth = month;
-    const x = left + weekIndex * pitch;
-    if (x - lastLabelX < 30) return;
-    lastLabelX = x;
-    parts.push(`<text x="${x}" y="${top - 6}" fill="${colors.text}" font-size="10">${months[month]}</text>`);
-  });
-
-  ["Mon", "Wed", "Fri"].forEach((label, index) => {
-    const row = index * 2 + 1;
-    parts.push(
-      `<text x="0" y="${top + row * pitch + 9}" fill="${colors.text}" font-size="10">${label}</text>`,
-    );
-  });
-
-  weeks.forEach((week, weekIndex) => {
-    week.forEach((day, dayIndex) => {
-      if (!day.inYear) return;
-      const x = left + weekIndex * pitch;
-      const y = top + dayIndex * pitch;
-      const title = `${day.count} contribution${day.count === 1 ? "" : "s"} on ${day.date}`;
-      parts.push(
-        `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${colors.levels[levelOf(day)]}"><title>${esc(title)}</title></rect>`,
-      );
-    });
-  });
-
-  const legendY = top + 7 * pitch + 8;
-  const legendStart = width - 130;
-  parts.push(
-    `<text x="${legendStart}" y="${legendY + 9}" fill="${colors.text}" font-size="10">Less</text>`,
-  );
-  colors.levels.forEach((fill, index) => {
-    parts.push(
-      `<rect x="${legendStart + 30 + index * 13}" y="${legendY}" width="10" height="10" rx="2" fill="${fill}" />`,
-    );
-  });
-  parts.push(
-    `<text x="${legendStart + 30 + 5 * 13 + 4}" y="${legendY + 9}" fill="${colors.text}" font-size="10">More</text>`,
-  );
-
-  parts.push("</svg>");
-  return parts.join("");
 }
 
 const values = [
@@ -307,7 +175,6 @@ function radarSvg(theme) {
 const outDir = fileURLToPath(new URL("../assets/", import.meta.url));
 mkdirSync(outDir, { recursive: true });
 for (const theme of ["light", "dark"]) {
-  writeFileSync(`${outDir}/contrib-heatmap-${theme}.svg`, heatmapSvg(theme));
   writeFileSync(`${outDir}/contrib-radar-${theme}.svg`, radarSvg(theme));
 }
-console.log(`updated ${year}: ${total} contributions`);
+console.log(`updated ${year} breakdown: ${values.join(" / ")} (review / issues / prs / commits)`);

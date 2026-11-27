@@ -14,15 +14,42 @@ I'm a big fan of Minecraft and League of Legends, and I also enjoy fighting game
 
 Feel free to look around! I hope you enjoy my projects, and don't forget to leave a star.
 
-## Featured Projects
+## Repositories
 
-| Project | What it does | Stack |
-|:--|:--|:--|
-| [Azzer](https://github.com/karlmoriaty/azzer) | Local-first vocal pipeline that turns a raw vocal take into a release-ready track | Rust |
-| [return_rp](https://github.com/karlmoriaty/AxurePR-return-rp) | Axure RP 9/11 native prototype generator with AI Studio, CLI and MCP | TypeScript · Node.js |
-| [interior-moodboard-3d](https://github.com/karlmoriaty/interior-moodboard-3d) | Drag material samples into a cutaway apartment; move furniture and sunlight | Three.js · HTML |
-| [XSocialMiner](https://github.com/karlmoriaty/XSocialMiner) | Local X/Twitter data collection with a WPF dashboard | C# · WPF · Playwright |
+<!-- repositories:start -->
+<p align="center">
+<a href="https://github.com/karlmoriaty/AxurePR-return-rp"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/axurepr-return-rp.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/axurepr-return-rp.svg" alt="AxurePR-return-rp" width="48%">
+</picture></a>
+<a href="https://github.com/karlmoriaty/DiskFileManager"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/diskfilemanager.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/diskfilemanager.svg" alt="DiskFileManager" width="48%">
+</picture></a>
+</p>
 
+<p align="center">
+<a href="https://github.com/karlmoriaty/interior-moodboard-3d"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/interior-moodboard-3d.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/interior-moodboard-3d.svg" alt="interior-moodboard-3d" width="48%">
+</picture></a>
+<a href="https://github.com/sunng87/handlebars-rust"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/handlebars-rust.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/handlebars-rust.svg" alt="handlebars-rust" width="48%">
+</picture></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/neocmakelsp/neocmakelsp"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/neocmakelsp.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/neocmakelsp.svg" alt="neocmakelsp" width="48%">
+</picture></a>
+<a href="https://github.com/Runesgalder/Runesgalder"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/runesgalder.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/runesgalder.svg" alt="Runesgalder" width="48%">
+</picture></a>
+</p>
+<!-- repositories:end -->
 
 ## Open Source
 
@@ -75,14 +102,7 @@ C# 是我最喜欢的编程语言，我也喜欢使用 Go 和 TypeScript，并�
 |:---:|:---:|
 | ![GitHub stats](https://github-readme-stats.vercel.app/api?username=karlmoriaty&show_icons=true&include_all_commits=true&count_private=true&hide_border=true) | ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=karlmoriaty&layout=compact&langs_count=8&hide_border=true) |
 
-## Contribution Activity
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-heatmap-dark.svg">
-    <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-heatmap-light.svg" alt="Contribution heatmap for 2026" width="100%">
-  </picture>
-</p>
+## Contribution Breakdown
 
 <p align="center">
   <picture>

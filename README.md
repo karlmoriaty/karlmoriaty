@@ -22,27 +22,27 @@ Feel free to look around! I hope you enjoy my projects, and don't forget to leav
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/axurepr-return-rp.svg">
 <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/axurepr-return-rp.svg" alt="AxurePR-return-rp" width="48%">
 </picture></a>
-<a href="https://github.com/karlmoriaty/DiskFileManager"><picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/diskfilemanager.svg">
-<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/diskfilemanager.svg" alt="DiskFileManager" width="48%">
-</picture></a>
-</p>
-
-<p align="center">
 <a href="https://github.com/karlmoriaty/interior-moodboard-3d"><picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/interior-moodboard-3d.svg">
 <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/interior-moodboard-3d.svg" alt="interior-moodboard-3d" width="48%">
 </picture></a>
+</p>
+
+<p align="center">
 <a href="https://github.com/sunng87/handlebars-rust"><picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/handlebars-rust.svg">
 <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/handlebars-rust.svg" alt="handlebars-rust" width="48%">
 </picture></a>
-</p>
-
-<p align="center">
 <a href="https://github.com/neocmakelsp/neocmakelsp"><picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/neocmakelsp.svg">
 <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/neocmakelsp.svg" alt="neocmakelsp" width="48%">
+</picture></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/karlmoriaty/DiskFileManager"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/diskfilemanager.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/diskfilemanager.svg" alt="DiskFileManager" width="48%">
 </picture></a>
 <a href="https://github.com/Runesgalder/Runesgalder"><picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/runesgalder.svg">

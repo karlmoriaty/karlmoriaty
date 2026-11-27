@@ -99,13 +99,13 @@ Also contributed merged PRs to OpenTofu, Agones, Redux, MaterialDesignInXaml, Nu
 
 作为一名网络安全初学者和软件开发者，我正在努力成为一名网络安全工程师，或者一名纯粹的程序员。
 
-C# 是我最喜欢的编程语言，我也喜欢使用 Go 和 TypeScript，并且非常热衷于 Rust。我会用 C# 写一些小工具方便日常使用，还有就是参加例如创新创业大赛这样的比赛的项目我也主要使用C#进行开发；涉及底层逻辑开发时，我喜欢用 Rust 做基础设施或重构（最近几年使用Rust对底层一些的项目进行重构是一种趋势，我觉得这是个不错的选择）。
+C# 是我最喜欢的编程语言，我也喜欢使用 Go 和 TypeScript，并且非常热衷于 Rust。我会用 C# 写一些小工具方便日常使用，还有就是参加例如创新创业大赛这样的比赛的项目我也主要使用 C# 进行开发；涉及底层逻辑开发时，我喜欢用 Rust 做基础设施或重构（最近几年使用Rust对底层一些的项目进行重构是一种趋势，我觉得这是个不错的选择）。
 
-目前我主要活跃在全栈技术栈中（以桌面开发为主）：后端使用 C#、Go、Rust、Node.js，前端使用 JavaScript/TypeScript、HTML、CSS、Vue。
+目前我主要活跃在全栈技术栈中（以桌面开发和调配工具为主）：后端主要使用 C#、Go、Rust、Node.js，前端主要使用 TypeScript、HTML、CSS、Vue。当然其他的编程语言也很好，例如c/c++，但是由于c/c++需要频繁处理边界效应和内存管理等情况，因此我并不喜欢使用c/c++进行开发，个人能力和喜好问题请大家多多包容。其他的编程语言或多或少我也接触过，不过个人偏好 C#、Rust、TypeScript等编程语言。数据库的话我将其单独列出来，我对于不同的情况有不同的处理：一般情况我会使用PostgreSQL，需要用到临时存储的情况例如网页的临时缓存我会使用Redis，SQLite我一遍用于开发测试期的临时数据库，MySQL我之前喜欢用（因为学校老师都教这个，所以之前用得很多）但是现在正在逐步转移到PostgreSQL
 
 目前我是 [handlebars-rust](https://github.com/sunng87/handlebars-rust) 的 write 权限维护者，并在开发 [return_rp](https://github.com/karlmoriaty/AxurePR-return-rp)（Axure RP MCP 服务器）和一个 AI 翻唱工具 [Azzer](https://github.com/karlmoriaty/azzer)。如果有愿意了解一下的可以试试看。
 
-我非常喜欢玩 Minecraft 和英雄联盟，也喜欢一些格斗游戏（比如火影忍者、死神 VS 火影）。
+我非常喜欢玩 Minecraft 和英雄联盟，也喜欢一些格斗游戏（比如火影忍者、死神 VS 火影）。如果有喜欢玩的可以加个好友一起玩。
 
 欢迎随便逛逛！希望你喜欢我写的程序的话，别忘了点个 star鼓励鼓励我。
 

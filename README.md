@@ -75,6 +75,22 @@ C# 是我最喜欢的编程语言，我也喜欢使用 Go 和 TypeScript，并�
 |:---:|:---:|
 | ![GitHub stats](https://github-readme-stats.vercel.app/api?username=karlmoriaty&show_icons=true&include_all_commits=true&count_private=true&hide_border=true) | ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=karlmoriaty&layout=compact&langs_count=8&hide_border=true) |
 
+## Contribution Activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-heatmap-dark.svg">
+    <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-heatmap-light.svg" alt="Contribution heatmap for 2026" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-radar-dark.svg">
+    <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/contrib-radar-light.svg" alt="Contribution breakdown: commits, pull requests, issues, code review" width="420">
+  </picture>
+</p>
+
 ## Languages and Tools
 
 ### Languages

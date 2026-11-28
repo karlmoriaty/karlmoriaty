@@ -13,6 +13,8 @@ const EXTRA_REPOS = [
   "karlmoriaty/ClientLedger",
   "karlmoriaty/markdig",
   "karlmoriaty/XSocialMiner",
+  "karlmoriaty/OfficeCTRL",
+  "karlmoriaty/RunesHela",
 ];
 
 const REPO_FIELDS = `name

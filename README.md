@@ -71,6 +71,17 @@ Feel free to look around! I hope you enjoy my projects, and don't forget to leav
 <img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/xsocialminer.svg" alt="XSocialMiner" width="48%">
 </picture></a>
 </p>
+
+<p align="center">
+<a href="https://github.com/karlmoriaty/OfficeCTRL"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/officectrl.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/officectrl.svg" alt="OfficeCTRL" width="48%">
+</picture></a>
+<a href="https://github.com/karlmoriaty/RunesHela"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/dark/runeshela.svg">
+<img src="https://raw.githubusercontent.com/karlmoriaty/karlmoriaty/main/assets/repos/light/runeshela.svg" alt="RunesHela" width="48%">
+</picture></a>
+</p>
 <!-- repositories:end -->
 
 ## Open Source
